@@ -1,0 +1,90 @@
+public class JavaZoo {
+
+    // Attribute
+    private static String zooName = "Java Park n Zoo";
+
+    public static void main(String[] args) {
+        
+        // Print the zoo's name
+        System.out.println("Welcome to " + zooName);
+        System.out.println();
+        
+        // Create a ZooAnimal named Chip
+        ZooAnimal ZooAnimal2 = new ZooAnimal("Chip", "Brown", "Monkey", 5, false);
+        
+        // Create a ZooKeeper named Mr. Jackson Rock
+        ZooKeeper ZooKeeper2 = new ZooKeeper("Mr. Jackson Rock", "No degree", 15.00);
+        
+        // Create a Cage that is covered
+        Cage cage2 = new Cage(15, 20, 15,  false , true);
+        
+        // Output the details of the created objects
+        System.out.println(ZooAnimal2);
+        System.out.println();
+        System.out.println(ZooKeeper2);
+        System.out.println();
+        System.out.println(cage2);
+    }
+}
+
+// ZooAnimal class
+class ZooAnimal {
+    String name;
+    String color;
+    String type;
+    int age;
+    boolean isHungry;
+    
+    public ZooAnimal(String name, String color, String type, int age, boolean isHungry) {
+        this.name = name;
+        this.color = color;
+        this.type = type;
+        this.age = age;
+        this.isHungry = isHungry;
+    }
+    
+    @Override
+    public String toString() {
+        return "ZooAnimal (Name:"+ name+", Color:"+ color+ ", Type:"+ type+", Age:"+ age+", Hungry=" +  isHungry + ")";
+    }
+}
+
+// ZooKeeper class
+class ZooKeeper {
+    String name;
+    String degree;
+    double hourlyPaid;
+    
+    public ZooKeeper(String name, String degree, double hourlyPaid) {
+        this.name = name;
+        this.degree = degree;
+        this.hourlyPaid = hourlyPaid;
+    }
+    
+    @Override
+    public String toString() {
+        return "ZooKeeper [Name:" + name + ", Degree:" + degree + ", Hourly Paid:" + hourlyPaid + "]";
+    }
+}
+
+// Cage class
+class Cage {
+    int length;
+    int width;
+    int height;
+    boolean isClean;
+    boolean isCovered;
+    
+    public Cage(int length, int width, int height, boolean isClean, boolean isCovered) {
+        this.length = length;
+        this.width = width;
+        this.height = height;
+        this.isClean = isClean;
+        this.isCovered = isCovered;
+    }
+    
+    @Override
+    public String toString() {
+        return "Cage [length=" + length + ", width=" + width + ", height=" + height + ", isClean=" + isClean + ", isCovered=" + isCovered + "]";
+    }
+}
